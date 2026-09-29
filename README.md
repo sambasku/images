@@ -16,7 +16,8 @@ atau aplikasi mobile) mengirim gambar kata atau avatar.
 | Sumber submit | Cara |
 | ------------- | ---- |
 | Admin (web) | Unggah di form kata → `POST /api/v1/images?purpose=word` |
-| Mobile (Flutter) | Sheet gambar kata → endpoint yang sama |
+| Campaign notifikasi | Console campaign/template → `POST /api/v1/images?purpose=campaign` |
+| Mobile (Flutter) | Sheet gambar kata → endpoint yang sama (`purpose=word`) |
 | Avatar (web / mobile) | `POST /api/v1/users/me/avatar` |
 | Backend API | Menerima multipart → menulis file ke repo ini lewat **GitHub Contents API** |
 
@@ -34,6 +35,10 @@ Keduanya privat dan tetap di ImageKit.
 assets/
 ├── words/
 │   └── <ulid>.<ext>              # jpg | png | webp
+├── campaigns/
+│   └── <ulid>.<ext>              # gambar notification campaign
+├── discussions/
+│   └── <ulid>.<ext>
 └── avatars/
     └── <userId>/
         └── <ulid>.<ext>
