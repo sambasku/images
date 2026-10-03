@@ -39,6 +39,8 @@ assets/
 │   └── <ulid>.<ext>              # gambar notification campaign
 ├── discussions/
 │   └── <ulid>.<ext>
+├── sponsors/
+│   └── <ulid>.<ext>              # logo/avatar sponsor, id = id sponsors.json
 └── avatars/
     └── <userId>/
         └── <ulid>.<ext>
@@ -49,6 +51,7 @@ Contoh:
 ```text
 assets/words/01HXYZ….webp
 assets/avatars/01HUSER…/01HABC….jpg
+assets/sponsors/01K40MIQH8F7V9FQMSKPZMHWCN.webp
 ```
 
 - Gambar kata tidak memakai slug lemma. ULID dibuat **sebelum** kata
