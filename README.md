@@ -110,7 +110,4 @@ PUBLIC_IMAGE_GITHUB_TOKEN=<pat>
 
 Tanpa token atau URL, upload membalas **503** `PUBLIC_IMAGE_UPLOAD_UNAVAILABLE`.
 
-Dokumentasi alur: `docs/api/01-api-tambah-kata.md`,
-`docs/api/19-api-profil-publik.md`, dan
-`docs/mobile/mobile-base-stack.md` (bagian upload gambar) di monorepo
-SambasKu. Ringkasan env ada di `api/README.md`.
+Ringkasan env ada di `api/README.md`.
