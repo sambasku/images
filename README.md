@@ -17,6 +17,7 @@ atau aplikasi mobile) mengirim gambar kata atau avatar.
 | ------------- | ---- |
 | Admin (web) | Unggah di form kata → `POST /api/v1/images?purpose=word` |
 | Campaign notifikasi | Console campaign/template → `POST /api/v1/images?purpose=campaign` |
+| Foto wisata (place) | Console form wisata → `POST /api/v1/images?purpose=place` |
 | Mobile (Flutter) | Sheet gambar kata → endpoint yang sama (`purpose=word`) |
 | Avatar (web / mobile) | `POST /api/v1/users/me/avatar` |
 | Backend API | Menerima multipart → menulis file ke repo ini lewat **GitHub Contents API** |
@@ -37,8 +38,12 @@ assets/
 │   └── <ulid>.<ext>              # jpg | png | webp
 ├── campaigns/
 │   └── <ulid>.<ext>              # gambar notification campaign
+├── places/
+│   └── <ulid>.<ext>              # foto wisata / place (boleh banyak per place)
 ├── discussions/
 │   └── <ulid>.<ext>
+├── achievements/
+│   └── <code>.png                # asset badge/bingkai/stiker pencapaian
 ├── sponsors/
 │   └── <ulid>.<ext>              # logo/avatar sponsor, id = id sponsors.json
 └── avatars/
