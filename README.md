@@ -18,6 +18,7 @@ atau aplikasi mobile) mengirim gambar kata atau avatar.
 | Admin (web) | Unggah di form kata → `POST /api/v1/images?purpose=word` |
 | Campaign notifikasi | Console campaign/template → `POST /api/v1/images?purpose=campaign` |
 | Foto wisata (place) | Console form wisata → `POST /api/v1/images?purpose=place` |
+| Stiker katalog (console) | Form stiker → `POST /api/v1/images?purpose=sticker` (GIF OK) |
 | Mobile (Flutter) | Sheet gambar kata → endpoint yang sama (`purpose=word`) |
 | Avatar (web / mobile) | `POST /api/v1/users/me/avatar` |
 | Backend API | Menerima multipart → menulis file ke repo ini lewat **GitHub Contents API** |
@@ -44,6 +45,8 @@ assets/
 │   └── <ulid>.<ext>
 ├── achievements/
 │   └── <code>.png                # asset badge/bingkai/stiker pencapaian
+├── stickers/
+│   └── <id|ulid>.<ext>           # katalog chat/komentar (png|jpg|webp|gif)
 ├── sponsors/
 │   └── <ulid>.<ext>              # logo/avatar sponsor, id = id sponsors.json
 └── avatars/
@@ -66,8 +69,9 @@ assets/sponsors/01K40MIQH8F7V9FQMSKPZMHWCN.webp
 - Nama file ULID unik dan immutable. Unggah baru = file baru. Ganti avatar
   menghapus file lama (best-effort) setelah baris user terbarui.
 
-Format yang diterima API: **JPEG, PNG, WebP**. Ukuran maksimal **5 MB**.
-Isi file dicek magic byte, bukan hanya ekstensi.
+Format yang diterima API: **JPEG, PNG, WebP** (plus **GIF** hanya untuk
+`purpose=sticker`). Ukuran maksimal **5 MB**. Isi file dicek magic byte,
+bukan hanya ekstensi.
 
 ## URL publik (dipakai client)
 
